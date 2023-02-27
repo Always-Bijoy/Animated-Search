@@ -11,31 +11,97 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Animated Search
+
+A customizable animated search bar widget for Flutter.
+
 
 ## Features
 
+The `AnimatedSearch` widget can be used to implement a search feature in your app.
+It displays a search box that can be expanded by clicking on the search icon.
+When expanded, it displays a `TextField` that can be used to enter search queries.
 
+# Installing
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### 1. Depend on it
 
-## Getting started
+Add this to your package's `pubspec.yaml` file:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+  animated_search: ^1.0.0
+```
+
+### 2. Install it
+
+You can install packages from the command line:
+
+with `pub`:
+
+```
+$ pub get
+```
+
+with `Flutter`:
+
+```
+$ flutter pub get
+```
+
+### 3. Import it
+
+Now in your `Dart` code, you can use:
+
+```dart
+import 'package:animated_search/animated_search.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+`AnimatedSearch` is a _Stateful Widget_ that produces search animations.
+Include it in your `build` method like:
 
-```dart
-const like = 'sample';
+```
+ AnimatedSearch(
+   width: 0.7,
+   textEditingController: _textEditingController,
+   startIcon: Icons.search,
+   closeIcon: Icons.close,
+   iconColor: Colors.white,
+   cursorColor: Colors.white,
+   decoration: InputDecoration(
+     hintText: 'Search',
+     hintStyle: TextStyle(color: Colors.grey[300]),
+     border: InputBorder.none,
+   ),
+   onChanged: (String value) {
+     // handle search query
+   },
+ )
+```
+## Customization
+You can customize the appearance and behavior of the `AnimatedSearch` widget by providing values for its constructor parameters:
+
+```
+AnimatedSearch(
+  width: 0.7, // Width of the search bar when expanded (default: 0.7)
+  textEditingController: myController, // A controller for the search query text field
+  startIcon: Icons.search, // Icon to show when search bar is folded
+  closeIcon: Icons.close, // Icon to show when search bar is expanded
+  iconColor: Colors.white, // Color of the search icon (default: Colors.white)
+  cursorColor: Colors.white, // Color of the search query text field cursor (default: Colors.white)
+  onChanged: (String value) {}, // A callback to handle changes in the search query text field
+  decoration: InputDecoration( // Custom decoration for the search query text field
+    hintText: 'Search',
+    hintStyle: TextStyle(color: Colors.grey[300]),
+    border: InputBorder.none,
+  ),
+);
+
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## Contributions
+
+Contributions are welcome! If you find a bug or would like to suggest a new feature, please open an issue or submit a pull request.
