@@ -1,7 +1,7 @@
 name: animated_search
 description: A customizable animated search widget for Flutter that can be easily integrated into any app.
 
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Always-Bijoy/Animated-Search
 
 environment:
