@@ -1,4 +1,4 @@
-## 1.0.0
+## 0.0.1
 - Initial release of the `animated_search` package.
 - Provides a customizable animated search widget for Flutter.
 - Supports smooth transition animation between a collapsed and expanded state.
