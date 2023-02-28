@@ -30,7 +30,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  animated_search: ^1.0.0
+  animated_search: ^0.0.2
 ```
 
 ### 2. Install it
