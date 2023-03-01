@@ -57,6 +57,7 @@ class AnimatedSearch extends StatefulWidget {
   }) : super(key: key);
 
   /// The width of the search box when expanded.
+  /// 0.0 - 1.0
   final double width;
 
   /// The controller for the `TextField`.

@@ -22,6 +22,9 @@ The `AnimatedSearch` widget can be used to implement a search feature in your ap
 It displays a search box that can be expanded by clicking on the search icon.
 When expanded, it displays a `TextField` that can be used to enter search queries.
 
+#### AWESOME RATING
+![DEMO](screenshot/Screenshot.png)
+
 # Installing
 
 ### 1. Depend on it
@@ -30,7 +33,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  animated_search: ^0.0.2
+  animated_search: ^0.0.3
 ```
 
 ### 2. Install it

@@ -11,11 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Animated Search'),
     );
   }
 }
@@ -30,6 +31,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  final TextEditingController _textEditingController = TextEditingController();
+
+  String _searchText = '';
+
+  @override
+  void dispose() {
+    _textEditingController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         actions:  const [
           AnimatedSearch(
+            width: 1.0,
             iconColor: Colors.red,
             cursorColor: Colors.black,
             decoration: InputDecoration(
@@ -47,15 +60,22 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            AnimatedSearch(
-              iconColor: Colors.red,
-              cursorColor: Colors.black,
-            )
+        child:  Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: AnimatedSearch(
+                textEditingController: _textEditingController,
+                onChanged: (String value) {
+                  setState(() {
+                    _searchText = value;
+                  });
+                },
+              ),
+            ),
+            Text('Current search text: $_searchText'),
           ],
-        ),
+        )
       ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
