@@ -11,24 +11,23 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-## Animated Search
+## Animated Search For Flutter App
 
-A customizable animated search bar widget for Flutter.
+The `AnimatedSearch` widget is a customizable animated search bar widget for Flutter that can be used to implement a search feature in your app. It displays a search box that can be expanded by clicking on the search icon, and when expanded, it displays a `TextField` that can be used to enter search queries.
 
 
 ## Features
 
-The `AnimatedSearch` widget can be used to implement a search feature in your app.
-It displays a search box that can be expanded by clicking on the search icon.
-When expanded, it displays a `TextField` that can be used to enter search queries.
+- Customizable search animation widget
+- Expandable search bar with `TextField` for entering search queries
 
 #### AWESOME RATING
 <img src="./screenshot/Screenshot.png">
 
 # Installing
+To install the package, add the following to your project's `pubspec.yaml` file:
 
 ### 1. Depend on it
-
 Add this to your package's `pubspec.yaml` file:
 
 ```yaml
@@ -37,6 +36,7 @@ dependencies:
 ```
 
 ### 2. Install it
+After adding the dependency, run the following command in the terminal to install the package:
 
 You can install packages from the command line:
 
@@ -61,11 +61,11 @@ import 'package:animated_search/animated_search.dart';
 ```
 
 ## Usage
-
+To use the `AnimatedSearch` widget, include it in your build method as shown below:
 `AnimatedSearch` is a _Stateful Widget_ that produces search animations.
 Include it in your `build` method like:
 
-```
+```dart
  AnimatedSearch(
    width: 0.7,
    textEditingController: _textEditingController,
@@ -84,9 +84,10 @@ Include it in your `build` method like:
  )
 ```
 ## Customization
-You can customize the appearance and behavior of the `AnimatedSearch` widget by providing values for its constructor parameters:
+The `AnimatedSearch` widget can be customized by providing values for its constructor parameters. For example, you can customize the appearance and behavior of the widget by providing a custom width, controller, icons, colors, and decoration for the search query text field.
 
-```
+
+```dart
 AnimatedSearch(
   width: 0.7, // Width of the search bar when expanded (default: 0.7)
   textEditingController: myController, // A controller for the search query text field
@@ -108,3 +109,7 @@ AnimatedSearch(
 ## Contributions
 
 Contributions are welcome! If you find a bug or would like to suggest a new feature, please open an issue or submit a pull request.
+
+## License
+This package is licensed under the MIT License. See the LICENSE file for details.
+
