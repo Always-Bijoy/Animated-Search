@@ -23,7 +23,7 @@ It displays a search box that can be expanded by clicking on the search icon.
 When expanded, it displays a `TextField` that can be used to enter search queries.
 
 #### AWESOME RATING
-![DEMO](screenshot/Screenshot.png)
+<img src="./screenshot/Screenshot.png">
 
 # Installing
 
