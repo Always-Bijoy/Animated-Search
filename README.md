@@ -22,7 +22,7 @@ The `AnimatedSearch` widget is a customizable animated search bar widget for Flu
 - Expandable search bar with `TextField` for entering search queries
 
 #### ANIMATED SEARCH
-<img src="./screenshot/Screenshot.png">
+<img src="https://raw.githubusercontent.com/Always-Bijoy/Animated-Search/main/screenshot/Screenshot.png">
 
 # Installing
 To install the package, add the following to your project's `pubspec.yaml` file:
@@ -32,7 +32,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  animated_search: ^0.0.4
+  animated_search: ^0.0.5
 ```
 
 ### 2. Install it
