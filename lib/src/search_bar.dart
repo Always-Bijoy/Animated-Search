@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import '../../animated_search.dart';
 
 /// A widget that displays an animated search box that expands when clicked.
@@ -122,8 +124,8 @@ class _AnimatedSearchState extends State<AnimatedSearch> {
             ),
           ),
           AnimatedContainer(
-            duration: const Duration(milliseconds: 400),
-            child: InkWell(
+              duration: const Duration(milliseconds: 400),
+              child: InkWell(
                 onTap: () {
                   setState(() {
                     isFolded = !isFolded;
@@ -131,13 +133,15 @@ class _AnimatedSearchState extends State<AnimatedSearch> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Icon(
-                    isFolded ? widget.startIcon : widget.closeIcon,
-                    color: widget.iconColor,
-                    size: 26,
-                  ),
-                )),
-          )
+                  child: widget.textEditingController?.text.length == 0
+                      ? Icon(
+                          isFolded ? widget.startIcon : widget.closeIcon,
+                          color: widget.iconColor,
+                          size: 26,
+                        )
+                      : const SizedBox(),
+                ),
+              )),
         ],
       ),
     );
