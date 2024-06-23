@@ -133,7 +133,7 @@ class _AnimatedSearchState extends State<AnimatedSearch> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: widget.textEditingController?.text.length == 0
+                  child: widget.textEditingController!.text.isEmpty
                       ? Icon(
                           isFolded ? widget.startIcon : widget.closeIcon,
                           color: widget.iconColor,
