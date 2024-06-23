@@ -139,8 +139,7 @@ class _AnimatedSearchState extends State<AnimatedSearch> {
                           color: widget.iconColor,
                           size: 20,
                         )
-                      : const SizedBox(),
-                ),
+                      : const SizedBox(),),
               )),
         ],
       ),
