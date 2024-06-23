@@ -97,7 +97,7 @@ class _AnimatedSearchState extends State<AnimatedSearch> {
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
-      height: 55,
+      height: 45,
       width: isFolded ? width / 7 : width * widget.width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(42.0),
@@ -137,7 +137,7 @@ class _AnimatedSearchState extends State<AnimatedSearch> {
                       ? Icon(
                           isFolded ? widget.startIcon : widget.closeIcon,
                           color: widget.iconColor,
-                          size: 26,
+                          size: 20,
                         )
                       : const SizedBox(),
                 ),
