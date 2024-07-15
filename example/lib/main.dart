@@ -1,4 +1,5 @@
 import 'package:animated_search/animated_search.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final TextEditingController _textEditingController = TextEditingController();
 
+
   String _searchText = '';
 
   @override
@@ -47,16 +49,34 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions:  const [
-          AnimatedSearch(
-            width: 1.0,
-            iconColor: Colors.red,
-            cursorColor: Colors.black,
-            decoration: InputDecoration(
-              hintText: 'hello',
-              hintStyle: TextStyle(color: Colors.yellow)
+        actions:   [
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: AnimatedSearch(
+              textEditingController: _textEditingController,
+              iconColor: Colors.red,
+              cursorColor: Colors.black,
+                decoration: const InputDecoration(
+                  hintText: 'hello',
+                  hintStyle: TextStyle(color: Colors.yellow),
+                  border: InputBorder.none
+                ),
+              onChanged: (String value) {
+                setState(() {
+                  _searchText = value;
+                });
+              },
             ),
-          )
+          ),
+          // AnimatedSearch(
+          //   width: 1.0,
+          //   iconColor: Colors.red,
+          //   cursorColor: Colors.black,
+          //   decoration: InputDecoration(
+          //     hintText: 'hello',
+          //     hintStyle: TextStyle(color: Colors.yellow)
+          //   ),
+          // )
         ],
       ),
       body: Center(
